@@ -1,0 +1,678 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color:white;
+  color: #333;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #b2c9d6;
+  margin-bottom: 1rem;
+}
+
+/* Header */
+header {
+  background-color: #3a5a40;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Accommodation */
+.accommodations {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.acc-card-horizontal {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.acc-card-horizontal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.acc-card-horizontal img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.acc-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.acc-content h2 {
+  font-size: 2rem;
+  color: #3a5a40;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.acc-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .acc-card-horizontal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .acc-card-horizontal img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .acc-content {
+    padding: 20px;
+  }
+}
+
+/* Activities*/
+.activities-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(58, 90, 64, 0.7), rgba(58, 90, 64, 0.7)), url('Lawta.jpg') no-repeat center/cover;
+  color: #fff;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.activities-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.activities-header p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 40px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.activity-card {
+  background: #f2f2f2;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 350px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.activity-card h2 {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: #3a5a40;
+  font-family: "Playfair Display", serif;
+}
+
+.activity-card p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 15px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .activities {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .activity-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .activities-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .activities-header p {
+    font-size: 1.1rem;
+  }
+}
+
+.acc-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.acc-card:hover {
+  transform: translateY(-5px);
+}
+
+.acc-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.acc-card h2 {
+  font-size: 1.8rem;
+  margin: 15px 0 10px;
+  color: #3a5a40;
+  font-family: "Playfair Display", serif;
+}
+
+.acc-card p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 20px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #a3d9a5;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #a3d9a5;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* Contact / Booking*/
+.booking-contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-left,
+.booking-right {
+  flex: 1 1 500px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.contact-left h1,
+.booking-right h1 {
+  font-size: 2.5rem;
+  color: #3a5a40;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.contact-left p,
+.booking-right p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-left form,
+.booking-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  background-color: #3a5a40;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-right button:hover {
+  background-color: #2d4732;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(46, 125, 50, 0.6);
+}
+
+.contact-left button:hover {
+  background-color: #497550;
+}
+
+@media (max-width: 768px) {
+  .booking-contact-wrapper {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .contact-left,
+  .booking-right {
+    width: 100%;
+  }
+
+  .contact-left h1,
+  .booking-right h1 {
+    font-size: 2rem;
+  }
+}
+
+.hero {
+  background: url('Lawta.jpg') center/cover no-repeat;
+  height: 74vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: static;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: textReveal 1.5s ease-out;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: textReveal 1.5s ease-out 0.3s;
+}
+
+.cta-button {
+  background-color: #588157;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #3a5a40;
+  transform: scale(1.05);
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* About */
+.about {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(238, 238, 238, 0.9)), url('view.jpg') no-repeat center center/cover;
+  padding: 60px 40px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-left, .about-right {
+  flex: 1 1 400px;
+  max-width: 600px;
+  animation: fadeInUp 1.2s ease-in-out;
+  animation-fill-mode: both; 
+}
+
+.about-left {
+  animation-delay: 0.2s;
+}
+
+.about-right {
+  animation-delay: 0.4s; 
+}
+
+.about-left h1 {
+  font-size: 3rem;
+  color: #2f3e46;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-left p,
+.about-left h2,
+.about-right h2,
+.about-right p,
+.about-right ul {
+  text-align: left;
+}
+
+.about-left h2,
+.about-right h2 {
+  font-size: 2rem;
+  color: #3a5a40;
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-left p,
+.about-right p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-right ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.about-right ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Footer */
+footer {
+  background-color: #3a5a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* GALLERY SECTION */
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f3f8f5);
+}
+
+/* Title and Intro */
+.gallery h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #204130;
+  margin-bottom: 10px;
+}
+
+.gallery-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6d6d6d;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+/* GALLERY*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes textReveal {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    background: #3a5a40;
+    padding: 10px;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  footer {
+    padding: 30px 15px;
+  }
+
+  .socials a {
+    font-size: 1rem;
+    
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL FELICIDAD FARM & CAMPSITE | Booking & Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="el.PNG" alt="Campsite Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="abou.html">About</a></li>
+        <li><a href="acc.html">Accommodations</a></li>
+        <li><a href="act.html">Activities</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact / Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="booking-contact-wrapper">
+      <div class="contact-left">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have questions about our campsite or would like to book your stay, feel free to reach out.</p>
+        <form action="submit_form.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+
+      <div class="booking-right">
+        <h1>Book Your Stay at EL FELICIDAD FARM & CAMPSITE</h1>
+        <p>We offer a variety of accommodation options tailored to your needs. Book your perfect getaway today!</p>
+        <form action="submit_booking.php" method="POST">
+          <label for="check-in-date">Check-In Date:</label>
+          <input type="date" id="check-in-date" name="check_in_date" required>
+  
+          <label for="check-out-date">Check-Out Date:</label>
+          <input type="date" id="check-out-date" name="check_out_date" required>
+  
+          <label for="accommodation">Select Accommodation:</label>
+          <select id="accommodation" name="accommodation">
+            <option value="tent">Tent</option>
+            <option value="cabin">Cabin</option>
+            <option value="rv">RV</option>
+          </select>
+  
+          <label for="number-of-guests">Number of Guests:</label>
+          <input type="number" id="number-of-guests" name="number_of_guests" min="1" max="10" required>
+  
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 EL FELICIDAD FARM & CAMPSITE. All rights reserved. For educational purposes only.</p>
+      <div class="socials">
+        <p>If you'd like, you can also visit our <a href="https://www.facebook.com/elfelicidadcampsite" target="_blank">Facebook</a>   for more information and updates!</p>
+    </div>
+  </footer>
+</body>
+</html>
