@@ -30,6 +30,11 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   animation: slideIn 1s ease-out;
 }
+@media (max-width: 600px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
 
 .logo {
   height: 80px;
